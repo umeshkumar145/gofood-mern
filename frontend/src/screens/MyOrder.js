@@ -8,7 +8,7 @@ export default function MyOrder() {
 
     const fetchMyOrder = useCallback(() => {
         try {
-            const response = fetch("http://localhost:5000/api/auth/myOrderData", {
+            const response = fetch("https://gofood-mern-backend-5wvd.onrender.com/api/auth/myOrderData", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
