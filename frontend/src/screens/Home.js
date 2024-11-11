@@ -10,7 +10,7 @@ export default function Home() {
 
   const loadFoodItems = async () => {
     try {
-      const response = await fetch("https://gofood-mern-backend-v9gv.onrender.com/api/auth/foodData", {
+      const response = await fetch("${process.env.REACT_APP_BACKEND_URL}/api/auth/foodData", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       });
