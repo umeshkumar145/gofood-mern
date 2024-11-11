@@ -8,14 +8,14 @@ const port = process.env.PORT || 5000; // Use environment variable for port
 
 const cors = require('cors');
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend URL
+    origin: 'https://gofood-mern-frontend-evd1.onrender.com', // Replace with your frontend URL
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
   }));
 
 // Middleware for CORS
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.setHeader("Access-Control-Allow-Origin", "https://gofood-mern-frontend-evd1.onrender.com");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
