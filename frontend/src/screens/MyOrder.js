@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { useCallback } from 'react';
 
 export default function MyOrder() {
     const [orderData, setOrderData] = useState(null);
@@ -9,7 +8,7 @@ export default function MyOrder() {
 
     const fetchMyOrder = useCallback(() => {
         try {
-            const response =  fetch("http://localhost:5000/api/auth/myOrderData", {
+            const response = fetch("http://localhost:5000/api/auth/myOrderData", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -21,18 +20,17 @@ export default function MyOrder() {
                 throw new Error("Failed to fetch orders");
             }
 
-            const data =  response.json();
+            const data = response.json();
             setOrderData(data.orderData || []);
         } catch (error) {
             console.error("Error fetching order data:", error);
             setOrderData([]); // Set to empty array to handle in render
         }
-    },[]);
+    }, [userEmail]); // Include userEmail here as a dependency
 
     useEffect(() => {
         fetchMyOrder();
-    }, [fetchMyOrder]); // Include fetchMyOrder in the dependency array
-    
+    }, [fetchMyOrder]);
 
     return (
         <div>
