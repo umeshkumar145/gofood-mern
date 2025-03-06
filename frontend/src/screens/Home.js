@@ -92,7 +92,7 @@ export default function Home() {
               <div>No items available for this category</div>
             )}
           </div>
-        )) : <div>No categories available</div>}
+        )) : <div>Please wait until we fetch Categories...</div>}
       </div>
       <Footer />
     </div>
