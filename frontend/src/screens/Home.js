@@ -93,7 +93,7 @@ export default function Home() {
               <div>No items available for this category</div>
             )}
           </div>
-        )) : <div><img src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif" width={300} className= {` ${ isLoading ? ''  : 'hidden'} mx-auto`} alt="" />
+        )) : <div><img src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif" width={200} height={200} className= {` ${ isLoading ? ''  : 'hidden'} mx-auto`} alt="" />
           Please wait until we fetch Categories...
           </div>}
       </div>
