@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 
 export default function Home() {
   const [foodCat, setFoodCat] = useState([]);
-  let [isLoading, setIsLoading] = useState(false)
   const [foodItems, setFoodItems] = useState([]);
   const [search, setSearch] = useState('');
 
@@ -93,7 +92,7 @@ export default function Home() {
               <div>No items available for this category</div>
             )}
           </div>
-        )) : <div><img src="https://loading.io/assets/mod/spinner/spinner/lg.gif" width={300} className= {` ${ isLoading ? ''  : 'hidden'} ` } alt="" />
+        )) : <div>
           Please wait until we fetch Categories...
           </div>}
       </div>
