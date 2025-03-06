@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 
 export default function Home() {
   const [foodCat, setFoodCat] = useState([]);
+  let [isLoading, setIsLoading] = useState(false)
   const [foodItems, setFoodItems] = useState([]);
   const [search, setSearch] = useState('');
 
