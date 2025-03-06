@@ -94,7 +94,7 @@ export default function Home() {
             )}
           </div>
         )) : <div clasName="mx-auto mt-4"><img src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif" width={200} height={200} className= {` ${ isLoading ? ''  : 'hidden'}`} alt="" />
-          Please wait until we fetch Categories...
+          Please wait until we are fetching categories...
           </div>}
       </div>
       <Footer />
