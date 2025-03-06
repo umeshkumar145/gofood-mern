@@ -92,7 +92,9 @@ export default function Home() {
               <div>No items available for this category</div>
             )}
           </div>
-        )) : <div>Please wait until we fetch Categories...</div>}
+        )) : <div><img src="https://loading.io/assets/mod/spinner/spinner/lg.gif" width={300} className= {` ${ isLoading ? ''  : 'hidden'} ` } alt="" />
+          Please wait until we fetch Categories...
+          </div>}
       </div>
       <Footer />
     </div>
